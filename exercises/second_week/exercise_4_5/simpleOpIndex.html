@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4.5</title>
+    <script src="simpleOpScript.js"></script>
+  </head>
+  <body>
+    <h2>
+      Enter two numbers & choose an arithmetic operator to display the result
+    </h2>
+    <label>Enter your first number:</label><br />
+    <input type="number" id="num1" /><br />
+    <label>Enter your second number:</label><br />
+    <input type="number" id="num2" /><br />
+    <div>
+      <dl>
+        <button onclick="calculate(this)" value="+">[ + ] Add</button>
+        <button onclick="calculate(this)" value="-">[ - ] Substract</button>
+        <button onclick="calculate(this)" value="*">[ * ] Multiply</button>
+        <button onclick="calculate(this)" value="/">[ / ] Divide</button>
+      </dl>
+    </div>
+    <label>The result of your arithmetic operation is:</label><br /><br />
+    <input type="number" id="result" placeholder="try to guess it!" />
+  </body>
+</html>

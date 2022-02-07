@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Exercise 4.1 Extra</title>
+    <script src="rockScript.js" defer></script>
+  </head>
+  <body>
+    <div class="options">
+      <button class="selection" id="close-image1">
+        <img src="raised_fist.png" data-selection="rock" />
+        <!--data..so we know what button we´re calling in JS-->
+      </button>
+
+      <button class="selection" id="close-image2">
+        <img src="palm-down-hand.png" data-selection="paper" />
+      </button>
+
+      <button class="selection" id="close-image2">
+        <img src="vulcan-salute.png" data-selection="scissors" />
+      </button>
+    </div>
+    <div class="results">
+      <div>
+        You
+        <span class="resultScore">0</span>
+      </div>
+      <div>
+        Computer
+        <span class="resultScore">0</span>
+      </div>
+      <!-- <div class="resultSelection winner">✊</div>
+      <div class="resultSelection">✌️</div> -->
+    </div>
+  </body>
+</html>

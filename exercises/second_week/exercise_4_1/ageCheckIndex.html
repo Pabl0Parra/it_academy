@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+
+      /* The hero image */
+      .hero-image {
+        /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("casinoHero.jpg");
+
+        /* Set a specific height */
+        height: 50%;
+
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      /* Place text in the middle of the image */
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+    </style>
+    <title>Age Verification</title>
+    <script src="ageCheckScript.js"></script>
+  </head>
+  <body>
+    <div id="ageCheck" class="hero-image">
+      <div class="hero-text">
+        <h3>Please enter your name, last name & age:</h3>
+        <label>Name: <input type="text" id="first" /></label><br /><br />
+        <label>Surname: <input type="text" id="last" /></label><br /><br />
+        <label>Age: <input type="number" id="age" /></label><br /><br />
+        <button onclick="ageCheckFunction()">Check age</button>
+      </div>
+    </div>
+  </body>
+</html>
