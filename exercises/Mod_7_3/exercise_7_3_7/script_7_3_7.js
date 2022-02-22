@@ -18,6 +18,18 @@ function calculatePrice() {
     "id_totalingredients"
   ).innerHTML = `To make this fideua, we are going to need ${TOTALAMOUNTNOODLES} kgs of noodles, also ${TOTALAMOUNTSQUIDS} kgs of squid and ${TOTALAMOUNTSHRIMPS} kgs of shrimps`;
 
-  let servingPrice = n;
-  let totalPrice;
+  const TOTALNOODLESPRICE = TOTALAMOUNTNOODLES * (noodlesPrice / KILOGRAM);
+  const TOTALSQUIDPRICE = TOTALAMOUNTSQUIDS * (squidPrice / KILOGRAM);
+  const TOTALSHRIMPSPRICE = TOTALAMOUNTSHRIMPS * (shrimpPrice / KILOGRAM);
+
+  const TOTALFIDEUAPRICE =
+    TOTALNOODLESPRICE + TOTALSQUIDPRICE + TOTALSHRIMPSPRICE;
+  const PRICEPERSERVING = TOTALFIDEUAPRICE / foodies;
+
+  document.getElementById(
+    "id_priceperserving"
+  ).innerHTML = `The price per serving is €${PRICEPERSERVING}`;
+  document.getElementById(
+    "id_totalfideuaprice"
+  ).innerHTML = `The cost of the fideua for ${foodies} is €${TOTALFIDEUAPRICE}`;
 }
