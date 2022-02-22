@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 7.3.7</title>
+  </head>
+  <body>
+    <h1>Enter the following to calculate the price per serving:</h1>
+    <label for="id_foodies">How many people are going to eat fideau?</label>
+    <input type="number" id="id_foodies" min="4" step="1" required /><br />
+    <label for="id_pasta">Enter the price per kilo for noodles</label>
+    <input type="number" id="id_pasta" required /><br />
+    <label for="id_squid">Enter the price per kilo for squid</label>
+    <input type="number" id="id_squid" required /><br />
+    <label for="id_shrimp">Enter the price per kilo for shrimps</label>
+    <input type="number" id="id_shrimp" required /><br />
+
+    <button onclick="calculatePrice()">Submit</button>
+
+    <p id="id_priceperperson"></p>
+    <p id="id_totalprice"></p>
+
+    <script src="./script_7_3_7.js"></script>
+  </body>
+</html>

@@ -23,11 +23,17 @@ function findMinIndex() {
 }
 findMinIndex();
 
-//2b Find value of the index above
+//2c Find value of the above index
 
 function print_array_element(myArray, i) {
   console.log(myArray[i]);
 }
 console.log("The smallest value is: " + myArray[2]);
 
-//2d
+//2d Third Method
+//A function that recives two numbers as parameters and returns and array with all the numbers in between them, both included
+function numberRange(start, end) {
+  return new Array(end - start + 1).fill().map((d, i) => i + start);
+}
+numberRange(5, 10);
+console.log(numberRange(5, 10));

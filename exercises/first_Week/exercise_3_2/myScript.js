@@ -1,8 +1,8 @@
 function mySumFunction() {
-  let y = parseFloat(document.getElementById("txt1").value); // parseFloat used to allow decimal numbers.
-  let z = parseInt(document.getElementById("txt2").value);
-  let x = "The result of the sum is " + (y + z) + ".";
-  const elementResult = (document.getElementById("add").innerHTML = x);
+  let y = parseInt(document.getElementById("txt1").value); // parseInt used to bypass the hexadecimal base numbers
+  let z = parseInt(document.getElementById("txt2").value); // parseInt used to bypass the hexadecimal base numbers
+  let x = "The result of the sum is " + (y + z) + "."; //
+  const elementResult = (document.getElementById("result").innerHTML = x);
 }
 
 function mySubstractionFunction() {

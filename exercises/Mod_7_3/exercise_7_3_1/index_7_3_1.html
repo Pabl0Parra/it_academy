@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 7.3.1</title>
+  </head>
+
+  <body>
+    <h1>Choose a geometrical shape and calculate its area</h1>
+    <form
+      action="javascript:calculateArea()"
+      onchange="javascript:updateForm()"
+    >
+      <label for="id_shapes">Select a shape</label>
+      <select id="id_shapes">
+        <option value="square">Square</option>
+        <option value="triangle">Triangle</option>
+        <option value="rectangle">Rectangle</option>
+        <option value="circle" selected>Circle</option>
+      </select>
+
+      <br /><br />
+
+      <div id="id_inputs_square" hidden>
+        <h4><em>Find the area of a square</em></h4>
+        <label for="id_side">Enter the side</label>
+        <input id="id_side" type="number" min="0" step="any" />
+        <h2>
+          <em>A = s<sup>2</sup></em>
+        </h2>
+      </div>
+
+      <div id="id_inputs_triangle" hidden>
+        <h4><em>Find the area of a triangle</em></h4>
+        <label for="id_base">Enter the base</label>
+        <input id="id_base" type="number" min="0" step="any" />
+        <label for="id_height">Enter the height</label>
+        <input id="id_height" type="number" min="0" step="any" />
+        <h2>
+          <em>A = <sup>bh</sup>&frasl;<sub>2</sub></em>
+        </h2>
+      </div>
+
+      <div id="id_inputs_rectangle" hidden>
+        <h4><em>Find the area of a rectangle</em></h4>
+        <label for="id_length">Enter the length</label>
+        <input id="id_length" type="number" min="0" step="any" />
+        <label for="id_width">Enter the width</label>
+        <input id="id_width" type="number" min="0" step="any" />
+        <h2><em>A = lw</em></h2>
+      </div>
+
+      <div id="id_inputs_circle">
+        <h4><em>Find the area of a circle</em></h4>
+        <label for="id_radius">Enter the radius</label>
+        <input id="id_radius" type="number" min="0" step="any" />
+        <h2>
+          <em>A = &Pi;r<sup>2</sup></em>
+        </h2>
+      </div>
+
+      <input type="submit" value="Calculate Area" />
+      <p id="id_output"></p>
+    </form>
+    <script src="./script_7_3_1.js"></script>
+  </body>
+</html>

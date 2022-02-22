@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5.5</title>
+  <body>
+    
+      <h1>Scholarship form</h1>
+      <h4>
+        We have 5 scholarships to give, please fill the form to see if you are
+        one of the winners!
+      </h4>
+      <h5 id="selectedStudent">Student number 1</h5>
+      <label for="userName">
+        Please, enter your name
+        <input type="text" id="userName" required />
+      </label>
+      <p>
+        <label for="userAge">
+          What is your age?
+          <input type="number" id="userAge" required />
+        </label>
+      </p>
+      <p>
+        <label for="universityTitle">
+          Do you hold an university title? Enter yes or no
+          <input type="text" id="universityTitle" required />
+        </label>
+      </p>
+      <p>
+        <label for="unemployed">
+          Are you currently unemployed? Enter yes or no
+          <input type="text" id="unemployed" required />
+        </label>
+      </p>
+
+      <p>
+        <button onclick="qualifyStudent()">Click to submit form</button>
+      </p>
+
+      <p id="messagePrint"></p>
+    
+    <script src="fiveFreeTuitionScript.js"></script>
+  </body>
+</html>

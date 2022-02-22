@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 7.3.4</title>
+  </head>
+  <body>
+    <h2>
+      Enter a DNI with its letter, the program will tell you wheter the letter
+      is the correct one or not
+    </h2>
+    <h2>
+      If it's not the right letter, the program will tell you the right letter
+      from the below table
+    </h2>
+    <img
+      src="./dni_table.jpg"
+      alt="DNI table"
+      width="800"
+      height="100"
+    /><br /><br />
+    <label for="id_user_dni">Enter your DNI with its letter in upper case</label
+    ><br /><br />
+    <input
+      type="text"
+      id="id_user_dni"
+      placeholder="...74679265T"
+    /><br /><br />
+    <input
+      type="submit"
+      value="Check DNI"
+      onclick="checkDNI()"
+      required
+    /><br />
+    <p id="id_display_result"></p>
+    <script src="./script_7_3_4.js"></script>
+  </body>
+</html>

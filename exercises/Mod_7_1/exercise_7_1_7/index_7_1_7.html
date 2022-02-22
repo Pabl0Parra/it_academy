@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Exercise 7.1.7</title>
+  </head>
+  <body>
+    <h1>Let's create a square with whatever character you choose:</h1>
+    <br />
+    <label>Enter your character</label>
+    <input type="text" id="userCharacter" placeholder="$, %, &..." /><br />
+    <label>Enter your number</label>
+    <input
+      type="number"
+      id="userNumber"
+      placeholder="1, 2, 3..."
+      min="0"
+      step="any"
+    /><br />
+    <button onclick="printSquare()">Print square</button>
+    <p id="display"></p>
+    <script src="./script_7_1_7.js"></script>
+  </body>
+</html>
