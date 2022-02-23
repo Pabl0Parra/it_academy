@@ -1,10 +1,11 @@
 function flipString() {
   let reversedString = "";
 
-  const USERSTRING = document.getElementById("id_user_string").value;
+  const USER_STRING = document.getElementById("id_user_string").value;
 
-  for (i = USERSTRING.length - 1; i >= 0; i--) {
-    reversedString += USERSTRING.charAt(i);
+  for (i = USER_STRING.length - 1; i >= 0; i--) {
+    //I use -1 bc the characters in the string are indexed from 0
+    reversedString += USER_STRING[i];
   }
   return (document.getElementById(
     "id_display_reversed"

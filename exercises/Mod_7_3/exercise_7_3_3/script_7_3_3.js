@@ -1,19 +1,26 @@
 function isPalindrome() {
   let reversedString = "";
 
-  const USERSTRING = document.getElementById("id_user_sentence").value;
+  if (document.getElementById("id_user_sentence").value.length == 0) {
+    alert("Please enter a sentence");
+  }
 
-  for (i = USERSTRING.length - 1; i >= 0; i--) {
-    reversedString += USERSTRING.charAt(i);
+  const USER_STRING = document.getElementById("id_user_sentence").value;
+
+  for (i = USER_STRING.length - 1; i >= 0; i--) {
+    reversedString += USER_STRING.charAt(i);
   }
-  if (USERSTRING === reversedString) {
+  if (
+    USER_STRING === reversedString &&
+    document.getElementById("id_user_sentence").value.length !== 0
+  ) {
     return (document.getElementById(
       "id_display_result"
-    ).innerHTML = `The sentence <em>${USERSTRING}</em> is a palindrome`);
+    ).innerHTML = `The sentence <em>${USER_STRING}</em> is a palindrome`);
   }
-  if (USERSTRING !== reversedString) {
+  if (USER_STRING !== reversedString) {
     return (document.getElementById(
       "id_display_result"
-    ).innerHTML = `The sentence <em>${USERSTRING}</em> is not a palindrome`);
+    ).innerHTML = `The sentence <em>${USER_STRING}</em> is not a palindrome`);
   }
 }

@@ -1,9 +1,13 @@
 function checkDNI() {
-  const USERDNI = document.getElementById("id_user_dni").value;
+  if (document.getElementById("id_user_dni").value.length == 0) {
+    alert("Please, enter a DNI");
+  }
 
-  const LETTERPOSITIONRESULT = USERDNI.slice(0, USERDNI.length - 1) % 23;
+  const INPUT_DNI = document.getElementById("id_user_dni").value;
 
-  const ASSIGNLETTERTONUMBER = [
+  const LETTER_POSITION_ = INPUT_DNI.slice(0, INPUT_DNI.length - 1) % 23;
+
+  const LETTER_TABLE = [
     "T",
     "R",
     "W",
@@ -29,15 +33,19 @@ function checkDNI() {
     "E",
   ];
 
-  const USERDNILETTER = USERDNI.charAt(USERDNI.length - 1);
+  const INPUT_DNI_LETTER = INPUT_DNI.charAt(INPUT_DNI.length - 1);
 
-  const RIGHTDNILETTER = ASSIGNLETTERTONUMBER[LETTERPOSITIONRESULT];
+  const RIGHT_DNI_LETTER = LETTER_TABLE[LETTER_POSITION_];
 
-  if (RIGHTDNILETTER === USERDNILETTER) {
+  if (RIGHT_DNI_LETTER === INPUT_DNI_LETTER) {
     return (document.getElementById("id_display_result").innerHTML =
       "The letter is the correct one");
   }
-  return (document.getElementById(
-    "id_display_result"
-  ).innerHTML = `The letter introduced does not match that DNI, the correct letter is: ${RIGHTDNILETTER}`);
+  if (
+    RIGHT_DNI_LETTER !== INPUT_DNI_LETTER &&
+    document.getElementById("id_user_dni").value.length !== 0
+  )
+    return (document.getElementById(
+      "id_display_result"
+    ).innerHTML = `The letter introduced does not match that DNI, the correct letter is: ${RIGHT_DNI_LETTER}`);
 }
