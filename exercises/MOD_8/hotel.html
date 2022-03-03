@@ -11,17 +11,33 @@
     <br />
     <div>
       <label>Enter the hotel name:</label>
-      <input type="text" id="id_name" /><br /><br />
+      <input type="text" id="name" /><br /><br />
       <label>Enter the number of rooms:</label>
-      <input type="number" id="id_rooms" /><br /><br />
+      <input type="number" id="rooms" /><br /><br />
       <label>Enter the number of floors:</label>
-      <input type="number" id="id_floors" /><br /><br />
+      <input type="number" id="floors" /><br /><br />
       <label>Enter the total area of the hotel:</label>
-      <input type="number" id="id_area" /><br /><br />
-      <button id="id_register">Register hotel</button>
-      <p id="id_registered_hotel"></p>
+      <input type="number" id="area" /><br /><br />
+      <button onclick="registerHotel()">Register hotel</button>
+      <p id="listHotels"></p>
+    </div>
+    <br /><br />
+
+    <div>
+      <label>Enter the hotel name to be deleted:</label>
+      <input type="text" id="byeHotel" /><br /><br />
+      <button onclick="deleteHotel()">Delete hotel</button>
+      <p id="updatedHotelList"></p>
+    </div>
+    <br /><br />
+
+    <div>
+      <label>Enter the hotel name to be displayed:</label>
+      <input type="text" id="displayed" /><br /><br />
+      <button onclick="deleteHotel()">Display hotel</button>
+      <p id="displayHotel"></p>
     </div>
 
-    <script type="module" src="./main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
