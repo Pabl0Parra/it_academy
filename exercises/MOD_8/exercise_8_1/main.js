@@ -24,12 +24,27 @@ button2.addEventListener("click", () => {
   createSecondComputer();
 });
 
-const buttonRam = document.getElementById("id_button_ram");
+const buttonRam1 = document.getElementById("id_button_ram1");
 
-buttonRam.addEventListener("click", () => {
-  const newRam = document.getElementById("id_new_ram").value;
+buttonRam1.addEventListener("click", () => {
+  const newRam = document.getElementById("id_new_ram1").value;
   computer1.set(newRam);
   console.log(newRam);
+});
+
+const buttonRam2 = document.getElementById("id_button_ram2");
+
+buttonRam2.addEventListener("click", () => {
+  const newRam2 = document.getElementById("id_new_ram2").value;
+  computer2.set(newRam2);
+  console.log(`the new ram for Pc2 is ${newRam2}`);
+});
+
+const buttonProcessor1 = document.getElementById("id_button_processor1");
+
+buttonProcessor1.addEventListener("click", () => {
+  computer1.getProcessor(processor);
+  console.log(`The PC1 has a ${processor} processor`);
 });
 
 let brand;

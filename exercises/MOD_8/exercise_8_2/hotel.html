@@ -21,7 +21,6 @@
       <button onclick="registerHotel()">Register hotel</button>
       <p id="listHotels"></p>
     </div>
-    <br /><br />
 
     <div>
       <label>Enter the hotel name to be deleted:</label>
@@ -29,13 +28,43 @@
       <button onclick="deleteHotel()">Delete hotel</button>
       <p id="updatedHotelList"></p>
     </div>
-    <br /><br />
 
     <div>
       <label>Enter the hotel name to be displayed:</label>
       <input type="text" id="displayed" /><br /><br />
-      <button onclick="deleteHotel()">Display hotel</button>
+      <button onclick="displayHotel()">Display hotel</button>
       <p id="displayHotel"></p>
+    </div>
+
+    <div>
+      <h3>Make hotel modifications in our database:</h3>
+      <h5>Modify hotel name</h5>
+      <label>Enter the name of the hotel to be changed:</label>
+      <input type="text" id="hotelName" />
+      <label>Enter the new hotel name:</label>
+      <input type="text" id="newHotelName" />
+      <button onclick="modifyHotelName()">New name</button>
+      <p id="displayNewName"></p>
+      <p id="displayNewList"></p>
+      <br /><br />
+      <h5>Modify number of rooms</h5>
+      <label>Enter the new number of rooms:</label>
+      <input type="number" id="newRooms" />
+      <button onclick="modifyRooms()">New number of rooms</button>
+      <p id="displayNewRooms"></p>
+      <br /><br />
+      <h5>Modify number of floors</h5>
+      <label>Enter the new number of floors:</label>
+      <input type="number" id="newFloors" />
+      <button onclick="modifyFloors()">New number of rooms</button>
+      <p id="displayNewFloors"></p>
+      <br /><br />
+      <h5>Modify total area of the hotel</h5>
+      <label>Enter the new area of the hotel:</label>
+      <input type="number" id="newArea" />
+      <button onclick="modifyArea()">New total area</button>
+      <p id="displayNewArea"></p>
+      <br /><br />
     </div>
 
     <script src="./main.js"></script>
